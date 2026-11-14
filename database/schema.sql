@@ -20,3 +20,18 @@ CREATE TABLE IF NOT EXISTS items (
     is_archived INTEGER DEFAULT 0,
     created_at TEXT DEFAULT CURRENT_TIMESTAMP
 );
+
+CREATE TABLE IF NOT EXISTS loans (
+    id INTEGERR PRIMARY KEY AUTOINCREMENT,
+    loan_code TEXT UNIQUE NOT NULL,
+    responsible_id INTEGER NOT NULL,
+    requested_by_id INTEGER,
+    collected_by_id INTEGER NOT NULL,
+    loan_date TEXT NOT NULL,
+    due_date TEXT,
+    status TEXT DEFAULT 'Dipinjam',
+    notes TEXT
+    FOREIGN KEY (responsible_id) REFERENCES users (users_id),
+    FOREIGN KEY (requested_by_id) REFERENCES users (users_id),
+    FOREIGN KEY (collected_by_id) REFERENCES users (users_id)
+);
