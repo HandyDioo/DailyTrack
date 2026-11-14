@@ -1,14 +1,13 @@
-# DailyTrack - Desktop Habit & Productivity Tracker
+# GearLog : Sistem Inventaris & Peminjaman Alat Lab TKJ
 
-Aplikasi desktop berbasis Python untuk mencatat kebiasaan harian, memantau progres keseharian, dan melihat rekap aktivitas mingguan menggunakan Tkinter dan JSON.
+GearLog adalah aplikasi desktop berbasis Python (Tkinter + SQLite) untuk membantu toolman mengelola inventaris serta mencatat transaksi peminjaman dan pengembalian peralatan laboratorium TKJ.
 
 ## Fitur Utama
 
-- Manajemen Kebiasaan (Habit CRUD & Scheduling)
-- Daily Check-in & Progress Dashboard
-- Calendar & History Activity Log
-- Rekap Statistik & Weekly/Monthly Progress
-- Backup Database & Export CSV
+- Inventory Management: Kelola data alat, kategori, total stok, dan stok tersedia.
+- User Management: Registrasi data siswa (NIS/Kelas) dan guru (NIP) dengan ID otomatis (`USR-XXXX`).
+- Borrowing & Return System: Peminjaman multi-barang dengan kode transaksi otomatis (`LN-YYYY-XXXX`), dukungan pengembalian sebagian, dan pencatatan kondisi barang.
+- Transaction History & Reports: Pelacakan riwayat transaksi dan laporan kondisi alat.
 
 ## Arsitektur & Teknologi
 
